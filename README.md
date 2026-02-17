@@ -32,10 +32,23 @@ Guía paso a paso para instalar **Anaconda**, crear un entorno virtual con **con
 
    Acepta licencia → elige yes para inicializar conda
 
-Verifica instalación (en terminal nueva):
-# Crear entorno (elige el nombre y versión que prefieras)
-conda create --name data_science python=3.11 -y
+En busqueda escribe: anaconda Prompt
 
+# Crear entorno (elige el nombre y versión que prefieras)
+
+**entorno** es el nombre que le daras al tu entorno, le puedes poner cualquier nombre
+
+en pantalla oscura dentro de anaconda Prompt escribe: conda create --name **entorno** python=3.11 -y
+
+
+# Activar el entorno
+conda activate entorno
+
+# (Opcional) Instalar paquetes comunes de una vez
+conda install -y numpy pandas matplotlib seaborn jupyter ipykernel scikit-learn
+
+# O con pip (dentro del entorno activado)
+pip install plotly xgboost lightgbm
 # Activar el entorno
 conda activate data_science
 
