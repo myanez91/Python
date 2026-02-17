@@ -57,3 +57,57 @@ pip install plotly xgboost lightgbm
 
 👉 https://code.visualstudio.com/
 Instala (en Windows marca “Add to PATH”)
+
+# 4. Conectar VS Code con el entorno conda
+
+Abre VS Code
+Instala extensiones esenciales:
+Python          → Microsoft
+Jupyter         → Microsoft (para notebooks)
+Pylance         → Microsoft (mejor autocompletado)
+Atajo: Ctrl+Shift+X → busca e instala
+Selecciona el intérprete correcto:
+Presiona Ctrl + Shift + P (o Cmd + Shift + P en Mac)
+Escribe: Python: Select Interpreter
+Elige el que diga algo como:textdata_science (Python 3.11.x)  ~/.conda/envs/data_science/bin/pythono la ruta equivalente en Windows
+
+(Opcional pero muy útil para Jupyter en VS Code)
+Dentro del entorno activado, registra el kernel:Bashpython -m ipykernel install --user --name data_science --display-name "Data Science (3.11)"
+
+5. Prueba rápida que todo funciona
+Crea un archivo test.py en VS Code:
+Pythonimport sys
+import numpy as np
+import pandas as pd
+
+print("¡Entorno funcionando!")
+print("Python:", sys.version.split()[0])
+print("NumPy:  ", np.__version__)
+print("Pandas: ", pd.__version__)
+
+df = pd.DataFrame({"A": [1, 2, 3], "B": [10, 20, 30]})
+print(df)
+Ejecuta:
+
+Clic en el triángulo verde (arriba derecha)
+o
+Ctrl+Shift+P → Python: Run Python File in Terminal
+
+Deberías ver la salida sin errores.
+Resumen de comandos más usados (copia y pega)
+Bash# Entornos
+conda env list
+conda create -n mi_entorno python=3.11 -y
+conda activate mi_entorno
+conda deactivate
+
+# Paquetes
+conda install numpy pandas matplotlib -y
+pip install seaborn plotly
+
+# Actualizar
+conda update -n base conda -y
+conda update --all -y
+
+# Jupyter kernel (para VS Code / JupyterLab)
+python -m ipykernel install --user --name mi_entorno --display-name "Mi Entorno"
