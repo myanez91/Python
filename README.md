@@ -9,12 +9,12 @@ Guía paso a paso para instalar **Anaconda**, crear un entorno virtual con **con
 
 ## 1. Instalar Anaconda
 
-1. Descarga Anaconda Individual Edition (gratuita)  
+1.1 Descarga Anaconda Individual Edition (gratuita)  
    👉 https://www.anaconda.com/download
 
-2. Elige la versión más reciente (Python 3.11 o 3.12 recomendado)
+1.2 Elige la versión más reciente (Python 3.11 o 3.12 recomendado)
 
-3. Instalación según tu sistema:
+1.3 Instalación según tu sistema:
 
    **Windows**
    - Ejecuta el `.exe`
@@ -25,35 +25,35 @@ Guía paso a paso para instalar **Anaconda**, crear un entorno virtual con **con
    - Abre el `.pkg` y sigue el asistente
    - Cierra y vuelve a abrir Terminal al finalizar
 
-   **Linux**
-   
-   ```bash
-   bash Anaconda3-*-Linux-x86_64.sh
-
-   Acepta licencia → elige yes para inicializar conda
-
 En busqueda escribe: anaconda Prompt
 
-# Crear entorno (elige el nombre y versión que prefieras)
+# 2. **Crear entorno (elige el nombre y versión que prefieras)**
 
 **entorno** es el nombre que le daras al tu entorno, le puedes poner cualquier nombre
 
 en pantalla oscura dentro de anaconda Prompt escribe: conda create --name **entorno** python=3.11 -y
 
-
-# Activar el entorno
+### Activar el entorno
 conda activate entorno
 
-# (Opcional) Instalar paquetes comunes de una vez
+### (Opcional) Instalar paquetes comunes de una vez
 conda install -y numpy pandas matplotlib seaborn jupyter ipykernel scikit-learn
 
-# O con pip (dentro del entorno activado)
+### O con pip (dentro del entorno activado)
 pip install plotly xgboost lightgbm
-# Activar el entorno
-conda activate data_science
 
-# (Opcional) Instalar paquetes comunes de una vez
+### Activar el entorno
+conda activate entorno
+
+### (Opcional) Instalar paquetes comunes de una vez
 conda install -y numpy pandas matplotlib seaborn jupyter ipykernel scikit-learn
 
-# O con pip (dentro del entorno activado)
+### O con pip (dentro del entorno activado)
 pip install plotly xgboost lightgbm
+
+# 3. Instalar Visual Studio Code
+
+3.1 Descarga VS Code
+
+👉 https://code.visualstudio.com/
+Instala (en Windows marca “Add to PATH”)
